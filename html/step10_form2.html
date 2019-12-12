@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>step10_form2.html</title>
+    <style>
+        .container {
+            width: 600px;
+            margin: 10px auto;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <h3>폼 요소 작성하기</h3>
+        <form action="save.html" method="POST">
+            <label for="id">id</label>
+            <!-- placeholder 아이디를 입력하세요 기능, value = default 값 넣기, 입력불가 disabled -->
+            <!-- get 방식의 경우는 disabled는 넘어가지 않음 -->
+            <input type="text" name=id id="id" placeholder="input id"
+                value="Flo" disabled="disabled"><br>
+
+            <label for="age">age</label>
+            <input type="number" name="age" id="age" placeholder="0"><br>
+
+            <fieldset>
+                <legend>gender</legend>
+                <input type="radio" name="gendar" id="male" value="male" checked="checked">
+                <label for="male">male</label>
+                <input type="radio" name="gendar" id="female" value="female" checked="checked">
+                <label for="female">female</label>
+            </fieldset>
+
+            <fieldset>
+                <legend>hobby</legend>
+                <input type="checkbox" name="hobby" id="baseball" value="baseball" checked="checked"/>
+                <label for="baseball">baseball</label>
+                
+                <input type="checkbox" name="hobby" id="tennis" value="tennis" checked="checked"/>
+                <label for="tennis">tennis</label>
+            </fieldset>
+
+            <label for="job">job</label>
+            <select name="job" id="job">
+                <option value="teacher">teacher</option>
+                <option value="doctor">doctor</option>
+                <option value="programmer">programmer</option>
+                <option value="etc">etc</option>
+            </select> <br>
+
+            <label for="file">file</label>
+            <input type="file" id="file" name="file"/><br>
+
+            <label for="comment">comment</label>br
+            <textarea name="comment" id="comment" cols="30" rows="10"></textarea><br>
+
+            <!-- 보이지 않게 키(name) 벨류(value) 값을 넘기고 싶으면 type을 hidden으로 -->
+            <input type="hidden" name="email" value="someone@test.com"/>
+
+            <input type="submit" value="sign up">
+            <input type="reset" value="cancel">
+
+        </form>
+    </div>
+
+</body>
+</html>

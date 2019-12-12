@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>step02_selector2.html</title>
+    <style>
+        /* ' '자손 , >자식 */
+        .container + p{
+            background-color: turquoise;
+        }
+        
+        /*  .container p - 자손전부 선택,
+            .container>p - 자식 p만 선택 
+            .container+p - 본인 옆에 인접만 선택, 자기 기준 밑에만
+            .container~p - 본인 형제들만 전부
+        */
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <p>Fusce a risus eget leo laoreet varius. Vestibulum sit amet lorem ut massa aliquet viverra ut vitae augue.</p>
+        <div>
+            <p>Phasellus et mauris dignissim, varius neque ut, suscipit nibh. Quisque a ligula vitae lacus ullamcorper vehicula</p>
+        </div>
+        <p>sit amet et orci. Proin non tristique mi, ac viverra orci. Aliquam nec mattis justo, sit amet consequat quam.</p>
+    </div>
+
+    <p>Quisque mauris dui, euismod ut interdum in, mollis vel enim. Ut viverra, lectus eu laoreet rhoncus, erat urna</p>
+    <p>posuere dolor, eu placerat nisi dolor auctor sapien. Proin ultricies lacus in ornare pretium. Lorem ipsum dolor</p>
+    <p>sit amet, consectetur adipiscing elit. Morbi consectetur dignissim hendrerit.</p>
+
+</body>
+</html>

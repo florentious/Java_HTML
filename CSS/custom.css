@@ -1,0 +1,9 @@
+@charset "utf-8"; /*  css 인코딩 설정 */
+
+p{
+    font-weight: bold;
+    border: 1px solid steelblue;
+    background-color: navy;
+    color: floralwhite;
+
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>step04_pseudo.html</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid royalblue;
+        }
+
+        .box:hover {
+            background-color: skyblue;
+        }
+
+        input:focus {
+            background-color: turquoise;
+        }
+
+        button:active {
+            background-color: violet;
+        }
+
+        /* 많이하는 것 a href*/
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration-color: violet;
+            text-decoration: underline;
+        }
+
+        a:link {
+            color: blue;
+        }
+
+        a:visited {
+            color: red;
+        }
+
+        #one::first-letter {
+            font-weight: bold;
+            font-size: 50px;
+            color: salmon;
+        }
+        #first::first-line {
+            background-color: springgreen;
+
+        }
+
+        #quote::before {
+            content : "'";
+            color: steelblue;
+        }
+
+        #quote::after {
+            content : "'";
+            color: tomato;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="box"></div>
+    <input type="text">
+    <input type="text">
+    <button>button</button>
+    <button>button</button>
+    <a href="https://www.google.com">google</a>
+    <a href="https://www.naver.com">naver</a>
+    <p id="one">hello World!</p>
+    <p id="first">hello World!</p>
+    <p id="quote">hello World!</p>
+
+</body>
+</html>
