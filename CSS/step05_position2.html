@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>step05_position2.html</title>
+    <style>
+        body {
+            margin: 0px;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            border : 3px dashed rebeccapurple;
+        }
+        .spacer {
+            height: 1000px;
+            background-color: springgreen;
+        }
+
+        #one {
+            position: relative;
+            top : 40px;
+            left: 0px;
+        }
+
+        #two {
+            /* 전체 화면의 좌표 */
+            position : absolute;    
+            top : 200px;
+            left: 200px;
+        }
+
+        #three {
+            /* 보이는 화면의 좌표(view port) */
+            position : fixed;
+            top : 100px;
+            left : 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">static</div>
+    <div class="box" id="one">relative</div>
+    <div class="spacer"></div>
+    <div class="box" id="two">absolute</div>
+    <div class="box" id="three">fixed</div>
+</body>
+</html>

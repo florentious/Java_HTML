@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>step01_var.html</title>
+    <script>
+        // 한줄 주석
+        /* 여러줄 주석 */
+        var num1 = 1000;
+        var num1 = 2000;    // 이중 선언이 가능하다
+
+        var yourName = "who";
+        var ourName = 'is';
+        var myName = `
+        t
+        r
+        o
+        l
+        l
+        `;  // es6에 추가된 문자열
+
+        console.log(num1);
+        console.log(yourName);
+        console.log(ourName);
+        console.log(myName);
+
+        console.log(a === b);
+        console.log(a == b);
+        var a = "1";
+        var b = 1;
+        
+
+        console.log(name2);
+        var name2 = "test";
+        console.log(name2);
+
+        console.log(foo());
+        function foo() {
+            console.log('function - foo');
+        }
+        console.log(foo());
+
+        //baz();              // it cant be function hoisting 
+        var baz = function() {
+            console.log('function - baz');
+        }
+
+        let a1 = 1000;
+        //let a1 = 2000;    // 이중선언불가
+        console.log(a1);
+
+        //console.log(a2);
+        let a2 = 1000;      // variable hositing error
+
+        var b1 = 100;
+        console.log(b1);
+        if(true) {
+            var b1 = 200;
+            console.log(b1);
+        }
+        console.log(b1);
+
+        let b2 = 100;
+        console.log(b2);    // 일반적인 variable이나 현실에선 잘안씀
+        if(true) {
+            let b2 = 200;
+            console.log(b2);
+        }
+        console.log(b2);
+
+        const c1 = 10;      // 값일때는 변경못하나 reference일때는 변경가능
+        //c1 = 20;
+
+        const e1 = [1,2,3]; // const reference는 안에 내용이 변경이 되도 상관없음
+        e1.push(4);         // const 주소값이 변경이 안되는 한 상관없음
+        console.log(e1);
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

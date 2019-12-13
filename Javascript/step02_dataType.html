@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>step02_dataType.html</title>
+    <script>
+        //1. number type
+        let num1 = 10;
+        let num2 = 20.1;
+
+        console.log(typeof num1);
+        console.log(typeof num2);
+
+        //2. string type
+        let string1 = "aaa";
+        console.log(typeof string1);
+        let myNum1 = "10";
+        console.log(num1 == myNum1);
+        console.log(num1 === myNum1);
+
+        //3. boolean type
+        let isRun = true;
+        let isGreater = 10> 5;
+        
+        console.log(typeof isRun);
+        console.log(typeof isGreater);
+
+        //4. undefined type
+        let test;
+        let test1 = undefined;
+        console.log(typeof test);
+        console.log(test == "undefined");
+        console.log(test === undefined);    //type 포함 비교시
+
+        //5. array type(object)
+        const arr1 = ['aa','bb','cc',123];
+        console.log(arr1);
+        console.log(typeof arr1);
+
+        //6. plain object type(object) , 자바의 class나 맵구조
+        const obj = {num : 1, name : 'aaa', isHuman : true};
+        console.log(typeof obj);
+
+        //7. function type 
+        // 함수식
+        const f = function() {
+
+        }
+        // 선언적 함수
+        function sum() {
+
+        }
+        console.log(typeof f); // function
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
