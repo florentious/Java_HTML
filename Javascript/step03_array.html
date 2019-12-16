@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>step03_array.html</title>
+    <script>
+        /*
+        array type(object type)
+        1. [] 를 이용해서 만든다.
+        2. 순서가 중요한 데이터를 처리할 때 사용한다.
+        3. 0부터 시작한다.
+        */
+
+        // construct array 
+
+        const nums1 = [1,2,3,4];
+        const nums2 = new Array(1,2,3,4);
+        const nums3 = Array(1,2,3,4);
+
+        // javascript array contains all type (like ArrayList)
+        const names = ['aaa','bbb','ccc'];
+
+        const randmes = ['abc',10,false];
+
+        // 결과값이 어떻게 떨어지는지 중요
+        // 100번째 배열에 50값이 들어가고 그 앞까지 안들어간 값이 생성됨
+        nums1[99] = 50;
+
+        //배열의 할당
+        nums1[0] = 100;
+        nums1[1] = 200;
+        nums1[2] = 300;
+        nums1[3] = 400;
+
+        // print array
+        console.log(typeof nums1);  //object
+        console.log(nums1);
+        alert(nums1);
+        
+        // join('-') : 배열의 모든 요소를 뒤에 parameter문자로 연결해서 문자열로 만들어줌
+        let str = nums1.join('');
+        console.log(str);
+
+        nums1.splice(2,1);  // 1파라미터 인덱스부터 2파라미터 개만큼 제거
+                            // 이후 배열크기도 줄어든다.
+        //nums1.splice(0,nums1.length);
+
+        console.log(nums1);
+
+        nums1.push(9000);   // 배열에 데이터 추가
+                            // 배열의 끝에 데이터가 추가되며, 배열크기도 늘린다.
+                            // index를 모르고 마지막에 추가할때 사용
+        console.log(nums1);
+
+        let size = nums1.length;
+
+        console.log(size);
+
+        //반복문으로 배열 출력
+        // for문 기본
+        // 기본문과 for of 자주 사용
+        // foreach 문 암기
+        for(let i=0;i<nums1.length;i++) {
+            console.log(nums1[i]);
+        }
+
+        // for .. in  -> 값이 있는 것만 출력해준다.
+        for(let i in nums1) {       // i - index
+            console.log(nums1[i]);
+        }
+
+        // in es6 // for .. of  -> 자바의 enhanced for문
+        for (const values of nums1) {
+            console.log(values);
+        }
+
+        // in es5up // foreach -> 값이 있는 것만 출력한다.
+        nums1.forEach(function(value, index) {
+            console.log(index+","+value);
+        });
+
+        // in es6 arrow function
+        // function : => 대체
+        nums1.forEach((value, index) => {
+            console.log(index+","+value);
+        });
+
+
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

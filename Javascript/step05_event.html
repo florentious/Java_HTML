@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>step05_event.html</title>
+    <script>
+        window.onload = function() {
+            document.getElementById("myBox").addEventListener("mouseover",function() {
+                this.style.backgroundColor = "powderblue";
+            });
+            document.getElementById("myBox").addEventListener("mouseout",function() {
+                this.style.backgroundColor = "white";
+            });
+            document.getElementById("myBox").addEventListener("mousedown",function() {
+                this.style.backgroundColor = "red";
+            });
+            document.getElementById("myBox").addEventListener("mouseup",function() {
+                this.style.backgroundColor = "blue";
+            });
+            // const myBox = document.getElementById("myBox"); 이런식으로 변수 받아서 사용함
+
+        };
+
+    </script>
+    <style>
+        #myBox {
+            width: 200px;
+            height: 200px;
+            border: 1px solid palegreen;
+            cursor : pointer;
+
+        }
+    </style>
+
+</head>
+<body>
+    <h1>mouse event</h1>
+    <div id="myBox"></div>
+    
+</body>
+</html>

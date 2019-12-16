@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>step03_number.html</title>
+    <script>
+    /*    
+    number type 
+    1. 원하는 숫자를 쓰거나 혹 산술 연살자의 결과로 만들어짐        
+    2. 산술 연산이 가능하다
+    3. 세부적으로는 정수형과 실수형으로 분류
+    */
+
+        let num1 = 10;          //int(number type)
+        let num2 = 20.1;        //float(number type)
+        
+        let sum = num1 + num2;  
+        console.log(sum);
+        console.log(typeof sum);
+        console.log(parseInt("abc"));   //NaN 불능
+
+        console.log("3.1");
+        console.log(3.1);
+        console.log(parseInt("3.1"));
+        console.log(parseFloat("3.1"));
+
+        result = "3.1" + 4;    // numberlic 으로 계산하려면 (+"3.1") +4 , parseFloat("3.1")+4
+        console.log(result);
+        console.log(typeof result);
+
+        result = 45/0;        //Infinity (무한대 표기)
+        console.log(result + 100);  // 다른 numberlic 을 더해도 같다
+
+        result = 0/0;         // NaN 불능
+        console.log(result + 100); 
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

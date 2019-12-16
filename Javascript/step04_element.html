@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>step04_element.html</title>
+    <script>
+        window.onload = function() {
+            // event 등록
+            document.getElementById("addBtn").addEventListener("click",function(){
+                console.log('btn');
+                let msg = document.getElementById("inputMsg").value;
+                
+                const li = document.createElement("li");
+                li.innerText = msg;
+                
+                document.getElementById("msgList").append(li);
+                document.getElementById("inputMsg").value = "";
+
+            });
+        }
+    
+    </script>
+
+</head>
+<body>
+    <input type="text" name="msg" id="inputMsg"/> 
+    <button id="addBtn">Add</button>
+    <ul id="msgList">
+        <li>11</li>
+        <li>22</li>
+    </ul>
+</body>
+</html>

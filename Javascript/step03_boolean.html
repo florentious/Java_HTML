@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>step03_boolean.html</title>
+    <script>
+        /*
+        boolean type
+        1. true, false 를 직접 작성하거나, 비교연산 또는 논리연산의 결과로 만들어진다.
+        2. 변수이름은 대화식으로 작성하는게 일반적이다.
+        */
+    
+        let isRun = true;
+        let isWait = false;
+        let isSmaller = 10<5;
+        let isEqual = 10 == 1000;
+        let isDifference = 10 != 10;
+        if(isRun) {
+            console.log('running now');
+        }
+
+        //falsy values
+        let a = 0;
+        let b = '';
+        let c;
+        let d = parseInt("abc");
+        let f = 0/0;
+        let g = null;
+        
+        console.log(typeof a);
+        if(a) {
+            console.log("return true");
+        } else {
+            console.log("return false");
+        }
+
+        if(a=10) {      //true, 'asdfasdf' also true
+            console.log("return true");
+        } else {
+            console.log("return false");
+        }
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>

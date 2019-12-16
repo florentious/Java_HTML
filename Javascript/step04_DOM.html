@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>step04_DOM.html</title>
+    <!-- head tag 안쪽에 보통 script 넣음. -->
+    <script>
+        window.onload = function() {            //window.onload html이 모두 로딩되었을때; 
+            console.log('onload');              // end of html 코드보다 나중에 호출됨
+            const h1 = document.createElement("h1");
+            const textNode = document.createTextNode("Hello Hi");
+            h1.appendChild(textNode);
+            document.body.appendChild(h1);
+        }
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    console.log("end of html")
+</script>
