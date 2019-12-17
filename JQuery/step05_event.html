@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+        <meta charset="UTF-8">
+    <title>step04_manipulation.html</title>
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+                
+        $(document).ready(function(){
+                $(".error").hide();
+                $("#id").focus();
+
+                // $("#sendMember").on("click",function(e) { 와 같은 기능러
+                $("#sendMember").click(function(e) {
+                        //기본 기능을 방지하기 위해 사용
+                        e.preventDefault();             
+                        //유효성 검사
+                        let id = $("#id").val();
+                        let email = $("#email").val();
+                        let password = $("#password").val();
+                        let checkPassword = $("#checkPassword").val();
+
+
+                        if(id) {       // id == "" 도 같은 표현
+                                $("#errorID").hide();
+                        } else {
+                                $("#errorID").show();
+                                $("#id").focus();
+                                return;           // 이후의 문장은 수행하지 않음
+                        }
+
+                        if(email) {     
+                                $("#errorEmail").hide();
+                        } else {
+                                $("#errorEmail").show();
+                                $("#email").focus();
+                                return;           // 이후의 문장은 수행하지 않음
+                        }
+
+                        if(password) {     
+                                $("#errorPassword").hide();
+                        } else {
+                                $("#errorPassword").show();
+                                $("#password").focus();
+                                return;           // 이후의 문장은 수행하지 않음
+                        }
+
+                        if(checkPassword) {     
+                                $("#errorCheckPassword").hide();
+                        } else {
+                                $("#errorCheckPassword").show();
+                                $("#checkPassword").focus();
+                                return;           // 이후의 문장은 수행하지 않음
+                        }
+
+                        if(password != checkPassword) {
+                                
+                                $("#errorMissmatchPassword").show();
+                                $("#checkPassword").val("");
+                                $("#checkPassword").focus();
+                                return;
+                        } else {
+                                $("#errorMissmatchPassword").hide();
+                                $("#errorCheckPassword").hide();
+                        }
+
+                        f.submit();
+
+                });
+
+        });
+    </script>
+        <style type="text/css">
+              .error {
+                      color: red;
+              }
+        </style>
+</head>
+<body>
+     <h3> jquery event</h3>
+
+     <form action="save.html" method="POST" name="f">
+             <label for="id">ID</label>
+             <input type="text" name="id" id="id" placeholder="Input ID">
+             <span class="error" id="errorID">Input ID</span>
+             <br>
+             <label for="email">E-mail</label>
+             <input type="text" name="email" id="email" placeholder="Input E-mail">
+             <span class="error" id="errorEmail">Input E-mail</span>
+             <br>
+             <label for="password">Password</label>
+             <input type="password" name="password" id="password" placeholder="Input Password">
+             <span class="error" id="errorPassword">Input Password</span>
+             <br>
+             <label for="checkPassword">Password Confirm</label>
+             <input type="password" name="checkPassword" id="checkPassword" placeholder="Input Password Confirm">
+             <span class="error" id="errorCheckPassword">Input Password Confirm</span>
+             <span class="error" id="errorMissmatchPassword">Missmatch Password</span>
+             <br>
+             <button type="submit" id="sendMember">sign up</button>
+             <button type="reset">cancel</button>
+
+
+
+     </form>
+        
+</body>
+</html>

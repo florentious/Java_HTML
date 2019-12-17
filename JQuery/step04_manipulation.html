@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+        <meta charset="UTF-8">
+    <title>step04_manipulation.html</title>
+    <script type="text/javascript" src="../js/jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+                
+        $(document).ready(function(){
+                //$("p").prepend("<strong>Hi!!!</strong>");     // 주체와 대상의 위치의 순서에 따라 다름
+                $("<strong>Hi!!!</strong>").prependTo("p");
+
+                //$('p').append("<strong>Bye!!!</strong>");     // 위아래 방법 마찬가지
+                $("<strong>Bye!!!</strong>").appendTo("p");
+
+                $('p').before("hi~");
+                $('p').after("bye~again");
+
+                $('p').text("<strong> 제이쿼리 </strong>");     // tag 무시하고 모두 텍스트 형태로 들어감
+                $('p').html("<strong> 제이쿼리 </strong>");     // tag 설정된 상태로 들어감
+
+                console.log($('p').text());
+                console.log($('p').html());
+
+                $('p').wrap("<div></div>");
+
+                //$('p').remove();           // elements 삭제
+                //$('p').detach();           // remove랑 같은 기능
+                $("p").empty();            // tag 안의 내용만 삭제   
+
+
+        });
+    </script>
+        <style type="text/css">
+                div {
+                        border: 2px solid red;
+                }
+                
+
+                p {
+                        background-color: paleturquoise;
+                }
+        </style>
+</head>
+<body>
+     <p>jQuery</p>
+        
+</body>
+</html>

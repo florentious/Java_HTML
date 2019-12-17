@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>helloWorlds</title>
+    <script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            //enter eventListner
+            $("#tf1").keydown(function(key) {
+                if(key.which == 13) {
+                    
+                    
+
+                    $(".inputThis").append("li").text($("#tf1").text());
+                    
+
+                }
+
+            });
+            /*
+            $("#btn1").mousedown(function() {
+                const li = createElement()
+            });
+            */
+        });
+    
+    </script>
+    <style>
+        ul li {
+            list-style: none;
+            margin: 0px;
+            float: 0px;
+        }
+
+        .btn {
+            color: aquamarine;
+            background-color: cornflowerblue;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div>
+        <input type="text" name="msg" id="tf1"><button class="btn" id="btn1">btn1</button>
+        <ul class="inputThis">
+        </ul>
+    </div>
+</body>
+</html>
